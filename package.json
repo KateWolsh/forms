@@ -8,7 +8,7 @@
     "build": "webpack --config webpack.prod.js",
     "lint": "eslint . --fix",
     "e2e": "jest --testPathPattern=./e2e/ --runInBand",
-    "test": "jest --detectOpenHandles",
+    "test": "jest",
     "coverage": "jest --coverage",
     "preshow:coverage": "npm run coverage",
     "show:coverage": "live-server coverage/lcov-report",

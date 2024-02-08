@@ -40,13 +40,13 @@ describe("Show tooltip after click", () => {
     await page.waitForSelector(".arrow");
     // Проверяем, что тултип открыт
     const tooltip = await page.$(".arrow");
-    expect(tooltip).not.toBeNull();
+    await expect(tooltip).not.toBeNull();
 
     // Второй клик для закрытия тултипа
     await button.click();
 
     // Проверяем, что тултип больше не отображается
     const tooltipClosed = await page.$(".arrow");
-    expect(tooltipClosed).toBeNull();
+    await expect(tooltipClosed).toBeNull();
   });
 });
