@@ -22,8 +22,9 @@ describe("Show tooltip after click", () => {
 
     browser = await puppeteer.launch({
       headless: true, // not show gui
-      slowMo: 250,
-      devtools: true, // show devTools
+      // slowMo: 250,
+      // devtools: true, // show devTools
+      args: ["--no-sandbox", "--disable-setuid-sandbox"], // Рекомендуемые аргументы для работы в среде CI
     });
     page = await browser.newPage();
   });
